@@ -10,7 +10,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ReactiveFormsModule,
     MatInputModule,
     MatToolbarModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
