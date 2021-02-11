@@ -10,7 +10,7 @@ export class EmployeeService {
   }
 
   allEmployee:Employee[] = [{
-    "id": 1,
+    "id": '1',
     "name": "Jhon",
     "phone": "9999999999",
     "address":
@@ -21,7 +21,7 @@ export class EmployeeService {
     "postal_code":"12455"
     }
     }, {
-    "id": 2,
+    "id": '2',
     "name": "Jacob",
     "phone": "AZ99A99PQ9",
     "address":
@@ -32,7 +32,7 @@ export class EmployeeService {
     "postal_code":"13455"
     }
     }, {
-    "id": 3,
+    "id": '3',
     "name": "Ari",
     "phone": "145458522",
     "address":
@@ -47,6 +47,25 @@ export class EmployeeService {
     // Returns all the employees
  getAllEmployees():Employee[]{
   return this.allEmployee;
+}
+
+addEmployee(employee:Employee){
+  this.allEmployee.push(employee);
+}
+
+getEmployee(id:string):Employee{
+  return this.allEmployee.find(emp => emp.id == id);
+}
+
+editEmployee(id,employee:Employee){
+  console.log(id);
+  var updateEmployee = this.allEmployee.find(emp => emp.id == id);
+  updateEmployee.name = employee.name;
+  updateEmployee.phone = employee.phone;
+  updateEmployee.address.city = employee.address.city;
+  updateEmployee.address.address_line1 = employee.address.address_line1;
+  updateEmployee.address.address_line2 = employee.address.address_line2;
+  updateEmployee.address.postal_code = employee.address.postal_code;
 }
 }
 

@@ -12,11 +12,16 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { MatButtonModule } from '@angular/material/button';
+import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    AddEmployeeComponent,
+    EditEmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,8 @@ import {MatCardModule} from '@angular/material/card';
     MatToolbarModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
